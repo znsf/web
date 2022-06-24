@@ -5,14 +5,13 @@ namespace ZnSf\Web\Domain\Subscribers;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpKernel\Event\ControllerEvent;
 use Symfony\Component\HttpKernel\Event\ResponseEvent;
 use Symfony\Component\HttpKernel\KernelEvents;
 use ZnCore\Base\Http\Enums\HttpStatusCodeEnum;
-use ZnLib\Web\Symfony4\MicroApp\Interfaces\ControllerLayoutInterface;
 use ZnLib\Web\View\View;
 use ZnLib\Web\Widgets\Alert\AlertWidget;
 use ZnLib\Web\Widgets\BreadcrumbWidget;
-use Symfony\Component\HttpKernel\Event\ControllerEvent;
 
 class SetLayoutSubscriber implements EventSubscriberInterface
 {
@@ -38,10 +37,10 @@ class SetLayoutSubscriber implements EventSubscriberInterface
     {
         $controller = $event->getController();
         list($controllerInstance, $actionName) = $controller;
-        if (/*isset($this->layout) &&*/ $controllerInstance instanceof ControllerLayoutInterface) {
-            $controllerInstance->setLayout(null/*$this->layout*/);
-//            $controllerInstance->setLayoutParams($this->getLayoutParams());
-        }
+//        if (/*isset($this->layout) &&*/ $controllerInstance instanceof ControllerLayoutInterface) {
+////            $controllerInstance->setLayout(null/*$this->layout*/);
+////            $controllerInstance->setLayoutParams($this->getLayoutParams());
+//        }
 //        $controllerEvent = new ControllerEvent($controllerInstance, $actionName, $request);
 //        $this->getEventDispatcher()->dispatch($controllerEvent, ControllerEventEnum::BEFORE_ACTION);
     }
@@ -53,7 +52,7 @@ class SetLayoutSubscriber implements EventSubscriberInterface
 
         $isWebResponse = get_class($response) == Response::class;
 
-        if($isAjax) {
+        if ($isAjax) {
 //            sleep(1);
             $jsonResponse = new JsonResponse([
                 //'title' => 'title',
