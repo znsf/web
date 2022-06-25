@@ -3,7 +3,7 @@
 namespace ZnSf\Web\Response;
 
 use Symfony\Component\HttpFoundation\Response;
-use ZnCore\Base\Format\Encoders\XmlEncoder;
+use ZnLib\Components\Format\Encoders\XmlEncoder;
 
 class XmlResponse extends Response
 {
