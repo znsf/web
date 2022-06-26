@@ -9,6 +9,8 @@ use ZnLib\Web\Components\View\Libs\View;
 return [
     'singletons' => [
         ControllerResolverInterface::class => ControllerResolver::class,
+
+        //        @todo: перенести в ZnLib\Web\Components\View
         View::class => View::class,
         Css::class => Css::class,
         Js::class => Js::class,

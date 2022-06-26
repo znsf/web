@@ -28,6 +28,8 @@ return [
             return new SessionTokenStorage($session);
         },
         SessionInterface::class => Session::class,
+
+//        @todo: перенести в ZnLib\Web\Components\Form
         CsrfTokenManagerInterface::class => CsrfTokenManager::class,
         ResolvedFormTypeFactoryInterface::class => ResolvedFormTypeFactory::class,
         FormFactoryInterface::class => FormFactory::class,
