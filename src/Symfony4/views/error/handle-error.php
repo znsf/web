@@ -7,7 +7,7 @@
  * @var Exception $exception
  */
 
-use ZnLib\Web\View\View;
+use ZnLib\Web\Components\View\Libs\View;
 
 ?>
 

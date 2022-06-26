@@ -6,7 +6,7 @@ use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Event\ExceptionEvent;
 use Symfony\Component\HttpKernel\KernelEvents;
-use ZnLib\Web\View\View;
+use ZnLib\Web\Components\View\Libs\View;
 use ZnSf\Web\Domain\Libs\CallAction;
 use ZnSf\Web\Symfony4\Controllers\ErrorController2;
 
