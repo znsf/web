@@ -10,7 +10,8 @@ class Bundle extends BaseBundle
     public function deps(): array
     {
         return [
-
+            \ZnLib\Web\Components\Form\Bundle::class,
+            \ZnLib\Web\Components\View\Bundle::class,
         ];
     }
     
@@ -18,7 +19,7 @@ class Bundle extends BaseBundle
     {
         return [
             __DIR__ . '/Domain/config/container-symfony.php',
-            __DIR__ . '/Domain/config/container-zn-web.php',
+//            __DIR__ . '/Domain/config/container-zn-web.php',
             __DIR__ . '/Domain/config/container-zn-bundles.php',
         ];
     }
