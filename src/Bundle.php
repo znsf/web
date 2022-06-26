@@ -12,6 +12,7 @@ class Bundle extends BaseBundle
         return [
             \ZnLib\Web\Components\Form\Bundle::class,
             \ZnLib\Web\Components\View\Bundle::class,
+            \ZnLib\Web\Components\Layout\Bundle::class,
         ];
     }
     
@@ -20,7 +21,7 @@ class Bundle extends BaseBundle
         return [
             __DIR__ . '/Domain/config/container-symfony.php',
 //            __DIR__ . '/Domain/config/container-zn-web.php',
-            __DIR__ . '/Domain/config/container-zn-bundles.php',
+//            __DIR__ . '/Domain/config/container-zn-bundles.php',
         ];
     }
 }
