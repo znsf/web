@@ -1,7 +1,7 @@
 <?php
 
 use Symfony\Component\HttpKernel\Controller\ControllerResolverInterface;
-use ZnLib\Web\Symfony4\HttpKernel\ControllerResolver;
+use ZnSf\Web\Domain\Libs\ControllerResolver;
 use ZnLib\Web\View\Resources\Css;
 use ZnLib\Web\View\Resources\Js;
 use ZnLib\Web\View\View;
