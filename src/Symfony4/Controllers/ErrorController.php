@@ -14,7 +14,7 @@ use ZnCore\Domain\Entity\Exceptions\NotFoundException;
 use ZnCore\Base\Env\Helpers\EnvHelper;
 use ZnCore\Contract\User\Exceptions\ForbiddenException;
 use ZnCore\Contract\User\Exceptions\UnauthorizedException;
-use ZnLib\Web\Symfony4\MicroApp\BaseWebController;
+use ZnLib\Web\Components\Controller\BaseWebController;
 use ZnSf\Web\Symfony4\Interfaces\ErrorControllerInterface;
 
 class ErrorController extends BaseWebController implements ErrorControllerInterface
